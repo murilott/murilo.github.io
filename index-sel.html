@@ -115,6 +115,42 @@
         input:checked {
             background-color: red;
         }
+
+        .primeira-linha::first-line {
+            background-color: blue;
+        }
+
+        .primeira-letra::first-letter {
+            background-color: red;
+        }
+
+        p.warning {
+            background-color: blue;
+        }
+
+        p#meuid {
+            background-color: red;
+        }
+
+        p:not(.classico) {
+            background-color: blue;
+        }
+
+        div span {
+            background-color: red;
+        }
+
+        div > span {
+            background-color: blue;
+        }
+
+        div + p {
+            background-color: red;
+        }
+
+        div ~ p {
+            background-color: blue;
+        }
     </style>
     
     <body>
@@ -270,7 +306,7 @@
         <hr>
         <br>
 
-        <h3>15</h3>
+        <h3>16</h3>
         <div>
             Última criança
             <div class="ultima">Filho 1</div>
@@ -283,7 +319,7 @@
         <hr>
         <br>
 
-        <h3>15</h3>
+        <h3>17</h3>
         <div>
             Primeira criança do tipo
             <p class="primeira-tipo">Filho 0 - outro tipo</p>
@@ -298,7 +334,7 @@
         <hr>
         <br>
 
-        <h3>15</h3>
+        <h3>18</h3>
         <div>
             Última criança do tipo
             <div class="ultima-tipo">Filho 1</div>
@@ -313,53 +349,189 @@
         <hr>
         <br>
 
-        <h3>15</h3>
+        <h3>19</h3>
         <div>
             única criança
             <div class="unica">Filho 1</div>
         </div>
 
-        <h3>15</h3>
+        <br>
+        <hr>
+        <br>
+
+        <h3>20</h3>
         <div>
             elemento vazio
             <span class="vazio"></span>
         </div>
 
-        <h3>15</h3>
+        <br>
+        <hr>
+        <br>
+
+        <h3>21</h3>
         <div>
             link, visitado, ativo, hover
             <a href="">Link</a>
         </div>
 
-        <h3>15</h3>
+        <br>
+        <hr>
+        <br>
+
+        <h3>22</h3>
         <div>
             input focus
             <input type="text">
         </div>
 
-        <h3>15</h3>
+        <br>
+        <hr>
+        <br>
+
+        <h3>23</h3>
         <div>
             link target
             <a href="#secao_01">Ir para seção 1</a>
             <p id="secao_01">Seção 1</p>
         </div>
 
-        <h3>15</h3>
+        <br>
+        <hr>
+        <br>
+
+        <h3>24</h3>
         <div>
             input enabled
             <input class="hab" type="text">
         </div>
 
-        <h3>15</h3>
+        <br>
+        <hr>
+        <br>
+
+        <h3>25</h3>
         <div>
             input disabled
             <input class="hab-dis" disabled type="text">
         </div>
 
-        <h3>15</h3>
+        <br>
+        <hr>
+        <br>
+
+        <h3>26</h3>
         <div>
             input checkbox
             <input type="checkbox">
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>27</h3>
+        <div>
+            Primeira linha 
+            <p class="primeira-linha">Primeira linha no elemento p <br> outra linha</p>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>28</h3>
+        <div>
+            Primeira letra 
+            <p class="primeira-letra">Primeira letra no elemento p</p>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>29</h3>
+        <div>
+            Elemento que foi atribuido uma classe 
+            <p class="warning">warning</p>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>30</h3>
+        <div>
+            Elemento que foi atribuido uma id 
+            <p id="meuid">ID</p>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>31</h3>
+        <div>
+            Elemento não casado com um seletor s
+            <p>Um texto sem a classe classico</p>
+            <p class="classico">Outro texto com a classe classico</p>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>32</h3>
+        <div>
+            Elemento descendente
+            <div><nav><span>Texto</span></nav></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>33</h3>
+        <div>
+            Elemento filho
+            <div><span>Texto</span></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>34</h3>
+        <div>
+            Elemento filho
+            <div><span>Texto</span></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h3>35</h3>
+        <div>
+            Elemento imediatamente irmão
+            <div>
+                <div>Div</div>
+                <p>Texto</p>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+        
+        <h3>36</h3>
+        <div>
+            Elemento após irmão
+            <div>
+                <div>Div</div>
+                <table>table</table>
+                <p>Texto</p>
+            </div>
         </div>
     </body>
 </html>
