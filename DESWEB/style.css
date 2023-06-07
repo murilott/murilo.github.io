@@ -1,0 +1,314 @@
+body {
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: -8px;
+}
+
+.container {
+  /*border: solid 3px #c3c3c3;*/
+  display: flex;
+  flex-direction: row;
+}
+
+.container > * {
+}
+
+.sidebar {
+  /*border: solid 3px orange;*/
+  background-color: #DEE9EE;
+  flex: 0.2 0 0;
+  height: 700px;
+}
+
+.sidebar > * {
+  /*border: solid 1px black;*/
+  color: #7d7d7d;
+  padding: 20px;
+}
+
+.listamenu > * {
+  /*border: solid 1px black;*/
+  padding: 10px;
+  margin: 5px
+}
+
+.listamenu > h4 {
+  padding-left: 10px;
+}
+
+li {
+  list-style-type: none;  
+  border-radius: 20px;
+  /*border: 1px solid green;*/
+  padding: 10px;
+  display: flex;
+}
+
+li:hover {
+  background-color: white;
+}
+
+li > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+}
+
+li:hover > span {
+  color: black;
+}
+
+.mainbar {
+  /*border: solid 3px #000;*/
+  max-width: 80%;
+  height: 500px;
+  margin: 15px;
+  flex: 0.8 0 0;
+}
+
+.dashtop {
+  /*border: solid 3px blue;*/
+  padding-bottom: 15px;
+  flex-direction: row;
+  display: flex;
+}
+
+.dashmain {
+  /*border: solid 3px red;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 30px 0 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo > span {
+  color: black;
+  font-size: x-large;
+  padding-left: 10px;
+}
+
+.barrapesquisa {
+  /*border: dotted 3px black;*/
+  margin-right: 5px;
+  height: 50px;
+  padding: 5px;
+  flex: 0.8 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.barrapesquisa > span {
+  padding-left: 10px;
+  font-size: small;
+  color: #7d7d7d;
+  min-width: 800px;
+}
+
+.perfil {
+  border-left: solid 2px #DEE9EE; 
+  padding: 5px;
+  height: 50px;
+  display: flex;
+  flex: 0.2 0 0;
+  justify-content: space-evenly;
+}
+.coluna {
+  font-size: small;
+  flex-direction: column;
+  align-self: center;
+}
+
+.coluna > p {
+  margin: 0px;
+}
+
+.linknav {
+  /*border: solid 1px purple;*/
+  margin-bottom: 30px
+}
+
+.centro {
+  align-self: center;
+  margin: auto;
+}
+
+/* Guia display grid: https://www.origamid.com/projetos/css-grid-layout-guia-completo/ 
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+
+https://stackoverflow.com/questions/44377343/css-only-masonry-layout
+
+https://stackoverflow.com/questions/50700360/css-grid-with-columns-of-unequal-height-and-width
+
+https://codepen.io/Paulie-D/pen/JZXzye
+
+*/
+
+/*
+boxlist com display grid usando grid-template-area
+*/
+
+.boxlist {
+  display: grid;
+  align-self: center;
+  gap: 10px;
+  grid-template-areas:
+    "um dois tres quatro"
+    "cinco seis seis seis"
+    "sete seis seis seis"
+    "sete oito oito nove" ;
+  /*grid-auto-rows: 95px;
+  grid-auto-columns: 205px;*/
+}
+
+.boxlist > * {
+ /* border: 2px dotted;*/
+  background-color: #DEE9EE;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+}
+
+.boxlist > * > * {
+  margin: 3px;
+}
+
+.c1 {
+  width: 150px;
+  grid-area: um;
+}
+
+.c2 {
+  width: 150px;
+  grid-area: dois;
+}
+
+.c3 {
+  width: 150px;
+  grid-area: tres;
+}
+
+.c4 {
+  width: 150px;
+  grid-area: quatro;
+}
+
+.c5 {
+  height: 70px;
+  width: 150px;
+  grid-area: cinco;
+}
+
+.c6 {
+  grid-area: seis;
+  height: auto;
+  max-width: 580px;
+}
+
+.c7 {
+  height: 220px;
+  width: 150px;
+  grid-area: sete;
+}
+
+.c8 {
+  grid-area: oito;
+  height: 100px;
+  max-width: 366px;
+}
+
+.c9 {
+  grid-area: nove;
+  height: 100px;
+  max-width: 150px;
+}
+
+.margin0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* 
+boxlist com display grid usando grid-row/column manual
+
+.boxlist {
+  margin: 15px;
+  display: grid;
+  gap: 5px;/*
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template:
+    "um dois tres quatro" 1fr
+    "cinco seis seis seis" 1fr
+    "sete seis seis seis" 1fr
+    "sete oito oito nove" 1fr
+    / 1fr 1fr 1fr 1fr; 
+}
+
+.boxlist > * {
+  border: 2px dotted;
+  height: 50px;
+}
+
+.c1 {
+  grid-column: 1.5;
+  grid-row: 1;
+  /* grid-area: um; 
+}
+
+.c2 {
+  grid-column: 3;
+  grid-row: 1;
+  /* grid-area: dois;
+}
+
+.c3 {
+  grid-column: 4.5;
+  grid-row: 1;
+  /* grid-area: tres;
+}
+
+.c4 {
+  grid-column: 6;
+  grid-row: 1;
+  /*grid-area: quatro;
+}
+
+.c5 {
+  grid-column: 1;
+  grid-row: 2;
+  /*grid-area: cinco;
+}
+
+.c6 {
+  grid-column: 1.5 / 6;
+  grid-row: 1 / 6;
+  /*grid-area: seis;
+}
+
+.c7 {
+  grid-column: 1;
+  grid-row: 3 / 6;
+  /*grid-area: sete;
+}
+
+.c8 {
+  grid-column: 2 / 3;
+  grid-row: 4 / 6;
+  /*grid-area: oito;
+}
+
+.c9 {
+  grid-column: 3;
+  grid-row: 4 / 6;
+  /*grid-area: nove;
+}
+
+*/
