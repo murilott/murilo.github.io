@@ -1,0 +1,42 @@
+main {
+  border: solid 1px;
+}
+
+body {
+  max-width: 960px;
+  margin: auto;
+}
+
+h1 {
+  border-bottom: 3px solid;
+}
+
+img {
+  border: 5px solid;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: #e5e5e5;
+  padding: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.buttonRight {
+  align-self: right;
+}
+
+button {
+  size: x-small;
+}
